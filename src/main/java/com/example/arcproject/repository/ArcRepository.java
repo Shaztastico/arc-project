@@ -1,10 +1,11 @@
 package com.example.arcproject.repository;
 
 import com.example.arcproject.model.ARC;
-
+import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class ArcRepository {
     private List<ARC> arcList = new ArrayList<>();
     private final List<String> workbenches = new ArrayList<>(List.of("Workbench", "Gunsmith", "Gear Bench",
@@ -24,7 +25,7 @@ public class ArcRepository {
         return null;
     }
 
-    private ARC add(ARC arc) {
+    public ARC add(ARC arc) {
         if (arc.getName() != null) {
             arcList.add(arc);
         }
@@ -32,7 +33,7 @@ public class ArcRepository {
     }
 
 
-    private ARC deleteFromList(String name) {
+    public ARC deleteFromList(String name) {
         ARC foundArc = findByName(name);
         if (foundArc != null) {
             arcList.remove(foundArc);
