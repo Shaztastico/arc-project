@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${arc.name}"></title>
+</head>
+<body>
+<h1 th:text="${arc.name}"></h1>
+<table>
+    <tr>
+        <th>Can Fly</th>
+        <td th:if="${arc.isCanFly()}==true">✔</td>
+        <td th:unless="${arc.isCanFly()}==true">✘</td>
+    </tr>
+    <tr>
+        <th>Is Stationary</th>
+        <td th:if="${arc.isStationary()}==true">✔</td>
+        <td th:unless="${arc.isStationary()}==true">✘</td>
+    </tr>
+</table>
+</body>
+</html>
