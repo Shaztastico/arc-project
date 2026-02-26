@@ -8,12 +8,33 @@ public class ARC {
     private boolean isLarge;
     private boolean canFly;
     private boolean isStationary;
+    private boolean hasLegs;
+    private String description;
 
-    public ARC(String name, boolean isLarge, boolean canFly, boolean isStationary, List<String> workbenches) {
+    public boolean isHasLegs() {
+        return hasLegs;
+    }
+
+    public void setHasLegs(boolean hasLegs) {
+        this.hasLegs = hasLegs;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public ARC(String name, boolean isLarge, boolean canFly, boolean isStationary, boolean hasLegs,
+               String description, List<String> workbenches) {
         this.name = name;
         this.isLarge = isLarge;
         this.canFly = canFly;
         this.isStationary = isStationary;
+        this.hasLegs = hasLegs;
+        this.description = description;
         this.workbenches = workbenches;
     }
 
