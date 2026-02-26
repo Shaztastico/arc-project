@@ -51,9 +51,9 @@ public class ArcRepository {
     }
 
     private void populateArcList() {
-        add(new ARC("Rocketeer", true, true, false, List.of("Explosives Station")));
-        add(new ARC("Tick", false, false, false, List.of("Medical Lab")));
-        add(new ARC("Snitch", false, true, false, List.of("Utility Station")));
+        add(new ARC("Rocketeer", true, true, false, false, "Big nasty raid-ending son of a bitch", List.of("Explosives Station")));
+        add(new ARC("Tick", false, false, false, true, "Facehugger but super sci-fi", List.of("Medical Lab")));
+        add(new ARC("Snitch", false, true, false, false, "Nobody likes them", List.of("Utility Station")));
     }
 
 

@@ -6,21 +6,27 @@
 </head>
 <body>
 <h1 th:text="${arc.name}"></h1>
+<p th:text="${arc.description}"></p>
 <table>
     <tr>
         <th>Can Fly</th>
-        <td th:if="${arc.isCanFly()}==true">✔</td>
-        <td th:unless="${arc.isCanFly()}==true">✘</td>
+        <td th:if="${arc.isCanFly}==true">✔</td>
+        <td th:unless="${arc.isCanFly}==true">✘</td>
     </tr>
     <tr>
         <th>Is Stationary</th>
-        <td th:if="${arc.isStationary()}==true">✔</td>
-        <td th:unless="${arc.isStationary()}==true">✘</td>
+        <td th:if="${arc.isStationary}==true">✔</td>
+        <td th:unless="${arc.isStationary}==true">✘</td>
     </tr>
     <tr>
         <th>Is Large</th>
-        <td th:if="${arc.isLarge()}==true">✔</td>
-        <td th:unless="${arc.isLarge()}==true">✘</td>
+        <td th:if="${arc.isLarge}==true">✔</td>
+        <td th:unless="${arc.isLarge}==true">✘</td>
+    </tr>
+    <tr>
+        <th>Has Legs</th>
+        <td th:if="${arc.hasLegs}==true">✔</td>
+        <td th:unless="${arc.hasLegs}==true">✘</td>
     </tr>
     <tr>
         <th>Needed for</th>
