@@ -17,6 +17,17 @@
         <td th:if="${arc.isStationary()}==true">✔</td>
         <td th:unless="${arc.isStationary()}==true">✘</td>
     </tr>
+    <tr>
+        <th>Is Large</th>
+        <td th:if="${arc.isLarge()}==true">✔</td>
+        <td th:unless="${arc.isLarge()}==true">✘</td>
+    </tr>
+    <tr>
+        <th>Needed for</th>
+        <td th:each="workbench:${arc.workbenches}">
+            <div th:text="${workbench}"></div>
+        </td>
+    </tr>
 </table>
 </body>
 </html>
