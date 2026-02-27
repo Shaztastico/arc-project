@@ -1,5 +1,6 @@
 package com.example.arcproject.controller;
 
+import com.example.arcproject.model.ARC;
 import com.example.arcproject.service.ArcService;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
@@ -28,6 +29,13 @@ public class ArcController {
     public String findArcByName(@PathVariable String name, Model model){
         model.addAttribute("arc", service.findByName(name));
         return "arcFoundByName";
+    }
+
+    @GetMapping("/add")
+    public String showArcAddForm(Model model) {
+        model.addAttribute("arc", new ARC());
+        model.addAttribute("workbenches", service.getWorkbenches());
+        return "arcAddForm";
     }
 
 }

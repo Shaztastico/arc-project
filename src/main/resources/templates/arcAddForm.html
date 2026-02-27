@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Adding Arc</title>
+</head>
+<body>
+<form th:action="@{/arcs/save}" th:object="${arc}" method="post">
+    <label>Name:</label>
+    <input type="text" th:field="*{name}" required>
+    <br>
+
+    <label>Description:</label>
+    <textarea th:field="*{description}" required placeholder="Describe the ARC here!"></textarea>
+    <br>
+
+    <label>Can it fly?</label>
+    <input th:type="checkbox" th:field="*{canFly}">
+    <br>
+
+    <label>Is it stationary?</label>
+    <input th:type="checkbox" th:field="*{isStationary}">
+    <br>
+
+    <label>Is it large?</label>
+    <input type="checkbox" th:field="*{isLarge}">
+    <br>
+
+    <label>Does it have legs?</label>
+    <input type="checkbox" th:field="*{hasLegs}">
+    <br>
+
+    <button type="submit">Create ARC</button>
+
+</form>
+</body>
+</html>

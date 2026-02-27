@@ -11,20 +11,8 @@ public class ARC {
     private boolean hasLegs;
     private String description;
 
-    public boolean isHasLegs() {
-        return hasLegs;
-    }
-
-    public void setHasLegs(boolean hasLegs) {
-        this.hasLegs = hasLegs;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    // Empty constructor to be used for our /add method in the controller.
+    public ARC() {
     }
 
     public ARC(String name, boolean isLarge, boolean canFly, boolean isStationary, boolean hasLegs,
@@ -38,9 +26,6 @@ public class ARC {
         this.workbenches = workbenches;
     }
 
-    // Empty constructor to be used for our /add method in the controller.
-    public ARC() {
-    }
 
     public List<String> getWorkbenches() {
         return workbenches;
@@ -58,15 +43,15 @@ public class ARC {
         this.name = name;
     }
 
-    public boolean isLarge() {
+    public boolean getIsLarge() {
         return isLarge;
     }
 
-    public void setLarge(boolean large) {
+    public void setIsLarge(boolean large) {
         isLarge = large;
     }
 
-    public boolean isCanFly() {
+    public boolean getCanFly() {
         return canFly;
     }
 
@@ -74,11 +59,29 @@ public class ARC {
         this.canFly = canFly;
     }
 
-    public boolean isStationary() {
+    public boolean getIsStationary() {
         return isStationary;
     }
 
-    public void setStationary(boolean stationary) {
+    public void setIsStationary(boolean stationary) {
         isStationary = stationary;
     }
+
+
+    public boolean getHasLegs() {
+        return hasLegs;
+    }
+
+    public void setHasLegs(boolean hasLegs) {
+        this.hasLegs = hasLegs;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 }
