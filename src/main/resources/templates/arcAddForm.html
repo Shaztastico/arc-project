@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Adding Arc</title>
+</head>
+<body>
+<form th:action="@{/arcs/save}" th:object="${arc}" method="post">
+  <label>Name:</label>
+  <input type="text" th:field="*{name}" required>
+  <br>
+
+  <label>Description:</label>
+  <textarea th:field="*{description}" required placeholder="Describe the ARC here!"></textarea>
+  <br>
+
+
+</form>
+</body>
+</html>
