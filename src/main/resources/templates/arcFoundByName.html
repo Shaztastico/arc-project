@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1 th:text="${arc.name}"></h1>
-<img th:src="@{/images/{fname}.png(fname=${#strings.toLowerCase(arc.name)})}" th:alt="${arc.name}">
+<img th:src="@{/images/{filename}.png(filename=${#strings.toLowerCase(arc.name)})}" th:alt="${arc.name}">
 <p th:text="${arc.description}"></p>
 <table>
     <tr>
