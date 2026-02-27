@@ -43,15 +43,15 @@ public class ARC {
         this.name = name;
     }
 
-    public boolean isLarge() {
+    public boolean getIsLarge() {
         return isLarge;
     }
 
-    public void setLarge(boolean large) {
+    public void setIsLarge(boolean large) {
         isLarge = large;
     }
 
-    public boolean isCanFly() {
+    public boolean getCanFly() {
         return canFly;
     }
 
@@ -59,16 +59,16 @@ public class ARC {
         this.canFly = canFly;
     }
 
-    public boolean isStationary() {
+    public boolean getIsStationary() {
         return isStationary;
     }
 
-    public void setStationary(boolean stationary) {
+    public void setIsStationary(boolean stationary) {
         isStationary = stationary;
     }
 
 
-    public boolean isHasLegs() {
+    public boolean getHasLegs() {
         return hasLegs;
     }
 
